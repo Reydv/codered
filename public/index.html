@@ -26,8 +26,21 @@
     -->
     <title>Codered</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#8A1C1C", // Merah
+              primary: "#272727", // Abu tua
+              secondary: "#A8A8A8", // Abu muda
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
+  <body class="bg-black">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
