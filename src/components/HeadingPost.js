@@ -1,12 +1,12 @@
 export default function HeadingPost({
   judul = "Pertamina Oplos Bahan Bakar Pertamax",
-  author = "codered",
+  author = "CodeRed",
 }) {
   return (
     <div className="border border-white rounded-lg py-3 px-5 mt-8">
       <h2 className="text-2xl">{judul}</h2>
       <div className="flex justify-between items-center mt-4">
-        <h2 className="text-secondary text-lg">{author}</h2>
+        <h2 className="text-secondary text-md sm:text-lg">By {author}</h2>
         <div className="flex justify-center gap-6 my-4 items-center">
           {/* Upvote */}
           <div className="flex gap-1">
