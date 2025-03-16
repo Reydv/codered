@@ -1,27 +1,13 @@
-export default function PostList({ judul, rel = 0 }) {
-  const relevansi = [
-    "Codered",
-    "Negatif Menengah",
-    "Negatif Tinggi",
-    "Positif Rendah",
-    "Positif Menengah",
-    "Positif Tinggi",
-  ];
+export default function HeadingPost({
+  judul = "Pertamina Oplos Bahan Bakar Pertamax",
+  author = "codered",
+}) {
   return (
-    <a className="bg-primary w-full" href={`/post/?judul=${judul}`}>
-      <div className={`py-2 bg-rel-${rel}`}></div>
-      <div className="py-4 lg:px-20 sm:px-6 px-1">
-        <h1 className="font-anonymous text-2xl font-bold"> {judul} </h1>
-        <h2 className="text-center my-3 text-sm">
-          Relevansi :{" "}
-          <span className={`text-rel-${rel}`}>{relevansi[rel]}</span>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          egestas, velit nec maximus ullam corper, leo tortor fringilla ante,
-          tincidunt viverra enim eros et nisl. Vivamus eg ...
-        </p>
-        <div className="flex justify-center gap-6 mt-5">
+    <div className="border border-white rounded-lg py-3 px-5 mt-8">
+      <h2 className="text-2xl">{judul}</h2>
+      <div className="flex justify-between items-center mt-4">
+        <h2 className="text-secondary text-lg">{author}</h2>
+        <div className="flex justify-center gap-6 my-4 items-center">
           {/* Upvote */}
           <div className="flex gap-1">
             <svg
@@ -78,6 +64,6 @@ export default function PostList({ judul, rel = 0 }) {
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 }
