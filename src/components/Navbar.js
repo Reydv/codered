@@ -76,7 +76,7 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="/profil"
+              href="/about"
               className="text-[#D0D0D0] no-underline tracking-[0.1em] hover:opacity-70 transition-opacity duration-300"
             >
               Profil Web

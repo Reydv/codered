@@ -1,26 +1,22 @@
 import Footer from "../components/Footer";
+import thiswarofmine from "../assets/logo/thiswarofmine.png";
 
 export default function Aturan() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
-      {/* Main content - skipping navbar as requested */}
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
-        {/* Title visible on mobile but hidden on larger screens since it's in navbar */}
-        <h1 className="text-3xl font-bold mb-12">ATURAN</h1>
+        <h1 className="text-3xl font-bold mb-12">Tentang Web</h1>
 
-        {/* Main card */}
         <div className="max-w-4xl w-full bg-black border border-primary rounded-2xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
-            {/* Left side - image */}
             <div className="md:w-2/5">
               <img
-                src="/placeholder.svg?height=400&width=300"
+                src={thiswarofmine}
                 alt="Dark figure in shadows"
                 className="w-full h-full object-cover"
               />
             </div>
 
-            {/* Right side - content */}
             <div className="md:w-3/5 p-8 flex flex-col justify-center">
               <h2 className="text-2xl font-bold mb-4 text-center">
                 Apa itu CodeRed?

@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import HeadingPost from "../components/HeadingPost";
+import CommentThread from "../components/Comment";
 import pertamina from "../assets/logo/pertamina.jpeg";
 
 export default function Post() {
@@ -12,7 +13,10 @@ export default function Post() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <HeadingPost judul={judul} />
-        <div className="py-4 px-2 sm:text-lg text-md">
+        <div
+          className="py-4 px-2 sm:text-lg text-md
+          "
+        >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             egestas, velit nec maximus ullamcorper, leo tortor fringilla ante,
@@ -77,6 +81,7 @@ export default function Post() {
             <li>https://lorem.com</li>
           </ol>
         </div>
+        <CommentThread />
       </div>
     </div>
   );

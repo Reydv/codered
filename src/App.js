@@ -4,6 +4,7 @@ import ContentMain from "./pages/ContentMain";
 import ContentComunity from "./pages/ContentComunity";
 import Navbar from "./components/Navbar";
 import Aturan from "./pages/Aturan";
+import Aturan2 from "./pages/Aturan2";
 import Post from "./pages/Post";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/posts" element={<ContentMain />} />
             <Route path="/comunity" element={<ContentComunity />} />
-            <Route path="/aturan" element={<Aturan />} />
+            <Route path="/aturan" element={<Aturan2 />} />
+            <Route path="/about" element={<Aturan />} />
             <Route path="/post" element={<Post />} />
           </Routes>
         </Router>
