@@ -1,8 +1,37 @@
 import ComPostList from "../components/ComPostList";
+import { useState, useEffect } from "react";
+import Modal from "../components/Modal";
 
 export default function ContentComunity() {
+  // Modal func
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Fetch data from local storage
+  const [items, setItems] = useState(() => {
+    // Load from Local Storage when the app starts
+    const storedItems = localStorage.getItem("items");
+    return storedItems ? JSON.parse(storedItems) : []; // Parse stored JSON or use an empty array
+  });
+
+  useEffect(() => {
+    const storedItems = localStorage.getItem("items");
+    if (storedItems) {
+      setItems(JSON.parse(storedItems));
+    }
+  }, []);
+
   return (
     <div className="max-h-screen">
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={"Buat Topik"}
+        updateItems={setItems}
+        items={items}
+      />
       <h1 className="text-3xl text-center my-3">Aula Veritatis</h1>
       <div className="flex justify-between px-5 max-w-screen flex-wrap">
         <div className="px-4 m-3 my-6">
@@ -17,7 +46,10 @@ export default function ContentComunity() {
               Fortis Fortuna Adiuvat
             </h1>
             <p className="text-xl">Keberuntungan berpihak pada yang berani</p>
-            <button className="rounded-3xl bg-accent w-fit px-4 py-2 text-xl">
+            <button
+              className="rounded-3xl bg-accent w-fit px-4 py-2 text-xl"
+              onClick={openModal}
+            >
               Buat Topik
             </button>
           </div>
@@ -37,15 +69,18 @@ export default function ContentComunity() {
             </select>
           </div>
           <div className="flex flex-col gap-3 py-4 pr-3 overflow-scroll max-h-full">
-            <ComPostList />
-            <ComPostList rel={1} judul="Efisiensi Dana Pendidikan" />
-            <ComPostList rel={2} />
-            <ComPostList rel={3} />
-            <ComPostList rel={4} />
-            <ComPostList rel={1} />
-            <ComPostList rel={2} />
-            <ComPostList rel={3} />
-            <ComPostList rel={4} />
+            {items.length === 0 && (
+              <div className="flex flex-col gap-3 py-4 pr-3 overflow-scroll max-h-full">
+                <ComPostList />
+              </div>
+            )}
+            {items.length > 0 && (
+              <div className="flex flex-col gap-3 py-4 pr-3 overflow-scroll max-h-full">
+                {items.map((item) => (
+                  <ComPostList judul={item.judul} rel={item.relevansi} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

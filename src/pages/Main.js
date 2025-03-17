@@ -31,7 +31,7 @@ function Main() {
           </a>
           <a
             className="border-[#3A3A3A] border text-secondary w-full sm:w-[400px] h-[48px] text-[16px] sm:text-[18px] font-serif font-bold tracking-[0.16em] uppercase hover:bg-[#3A3A3A] hover:text-[#FFFFFF] hover:border-[#D0D0D0] transition-all duration-300 flex justify-center items-center"
-            href="/posts"
+            href="/comunity"
           >
             Konten Komunitas
           </a>
