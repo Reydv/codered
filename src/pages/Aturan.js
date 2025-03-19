@@ -5,10 +5,10 @@ export default function Aturan() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
-        <h1 className="text-3xl font-bold mb-12">Tentang Web</h1>
+        <h1 className="text-3xl font-bold mb-12">Donasi</h1>
 
-        <div className="max-w-4xl w-full bg-black border border-primary rounded-2xl overflow-hidden">
-          <div className="flex flex-col md:flex-row">
+        <div className="sm:max-w-5xl max-w-4xl w-full bg-black border border-primary rounded-2xl overflow-hidden">
+          <div className="flex flex-col md:flex-row ">
             <div className="md:w-2/5">
               <img
                 src={thiswarofmine}
@@ -17,24 +17,38 @@ export default function Aturan() {
               />
             </div>
 
-            <div className="md:w-3/5 p-8 flex flex-col justify-center">
+            <div className="md:w-3/5 p-8 flex flex-col justify-center items-center">
+              <p className="text-center mb-4">
+                CodeRed adalah wadah bagi mereka yang berani berpendapat dan
+                berekspresi. Kami berkomitmen untuk menyebarkan informasi yang
+                membuka mata dan menyelenggarakan forum diskusi untuk membangun
+                kesadaran bersama.
+              </p>
               <h2 className="text-2xl font-bold mb-4 text-center">
-                Apa itu CodeRed?
+                <i className="fa fa-fist-raised mr-2"></i>
               </h2>
 
               <p className="text-center mb-4">
-                CodeRed adalah website yang berfokus untuk menyebarkan informasi
-                terkait isu atau kebijakan positif maupun negatif yang mempunyai
-                pengaruh terhadap kedaulatan Negara Republik Indonesia di
-                tingkat nasional.
+                Setiap donasi anda bukanlah sekadar materi, melainkan sebuah
+                ikhtiar agar desisan ular tetap terdengar, dan kicauan gagak
+                tetap terdiam.
               </p>
+              <br />
 
-              <p className="text-center mb-4">
-                Melalui website ini, forum dapat diselenggarakan untuk membahas
-                isu-isu yang sedang berlangsung. Kami akan terus berupaya
-                semaksimal mungkin untuk menjaga kualitas dan integritas forum
-                yang ada.
-              </p>
+              <div className="flex flex-col space-y-4 items-center">
+                <button className="bg-primary hover:bg-red-600 transition-colors duration-500 text-white font-bold py-2 px-4 rounded w-full max-w-xs">
+                  <i className="fa fa-donate mr-2"></i>
+                  Donasi via Saweria
+                </button>
+                <button className="bg-primary hover:bg-red-600 transition-colors duration-500 text-white font-bold py-2 px-4 rounded w-full max-w-xs">
+                  <i className="fa fa-paypal mr-2"></i>
+                  Donasi via PayPal
+                </button>
+                <button className="bg-primary hover:bg-red-600 transition-colors duration-500 text-white font-bold py-2 px-4 rounded w-full max-w-xs">
+                  <i className="fa fa-wallet mr-2"></i>
+                  Donasi via Dompet Digital
+                </button>
+              </div>
             </div>
           </div>
         </div>

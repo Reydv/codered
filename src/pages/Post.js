@@ -10,13 +10,10 @@ export default function Post() {
   let pertaminaimg = pertamina;
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px]">
       <div className="max-w-3xl mx-auto">
         <HeadingPost judul={judul} />
-        <div
-          className="py-4 px-2 sm:text-lg text-md
-          "
-        >
+        <div className="py-4 px-2 sm:text-lg text-md font-['Open_Sans']">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             egestas, velit nec maximus ullamcorper, leo tortor fringilla ante,
@@ -66,7 +63,7 @@ export default function Post() {
               Phasellus in lacus magna:
               <ul className="list-disc ps-10">
                 <li>Sic</li>
-                <li>Temper</li>
+                <li>Semper</li>
                 <li>Tyranis</li>
               </ul>
             </li>

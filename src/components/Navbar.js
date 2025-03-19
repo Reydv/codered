@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 bg-gradient-to-b from-black via-black/60 to-transparent w-full pt-4 sm:pt-6 z-[999] sm:backdrop-blur-xs"
+      className="fixed top-0 bg-gradient-to-b from-black via-black/60 to-transparent w-full pt-4 sm:pt-6 z-[999] backdrop-blur-sm"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="text-[#D0D0D0] text-[0.9rem] sm:text-[22px] tracking-[0.1em] hover:opacity-70 transition-opacity duration-300">
@@ -79,7 +79,7 @@ function Navbar() {
               href="/about"
               className="text-[#D0D0D0] no-underline tracking-[0.1em] hover:opacity-70 transition-opacity duration-300"
             >
-              Profil Web
+              DONASI
             </a>
           </li>
         </ul>
@@ -110,10 +110,10 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="/profil"
+              href="/about"
               className="block w-full text-[#D0D0D0] no-underline tracking-[0.1em] hover:opacity-70 transition-opacity duration-300 py-2"
             >
-              Profil
+              DONASI
             </a>
           </li>
         </ul>

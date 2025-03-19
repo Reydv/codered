@@ -42,7 +42,7 @@ const comments = [
 
 const Comment = ({ comment }) => {
   return (
-    <div className="ml-4 pl-4">
+    <div className="ml-4 pl-[26px]">
       <div className="flex items-start gap-2">
         <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold">
           A
@@ -69,11 +69,7 @@ const Comment = ({ comment }) => {
             <button className="text-xs text-gray-400 mt-1">Reply</button>
             <i className="fas fa-ellipsis-v ml-2 cursor-pointer ml-auto mr-[10px]"></i>
           </div>
-          <div className="mt-2">
-            <div className="flex gap-2 mt-2">
-              <button className="text-xs text-gray-400 mt-1">Reply</button>
-            </div>
-          </div>
+          <div className="mt-2"></div>
         </div>
       </div>
       <div className="mt-4">
@@ -90,8 +86,8 @@ const CommentThread = () => {
     <div className=" p-6 min-h-screen text-white ml-[-19px]">
       <hr />
       <h2 className="text-lg font-bold font-serif my-[10px]">COMMENT</h2>
-      <hr className="mb-4" />
-      <div className="ml-[-32px]">
+      <hr className="mb-[30px]" />
+      <div className="ml-[-39px]">
         {comments.map((comment) => (
           <Comment key={comment.id} comment={comment} />
         ))}
